@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Print Data</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main>
+      <h2>Print the Div</h2>
+      <button id="print">Print Customer Details</button>
+      <div id="details">
+        <fieldset>
+          <legend>Customer Details</legend>
+          <p>Name: Juan Dela Cruz</p>
+          <p>Address: Quezon City</p>
+        </fieldset>
+        <table id="table">
+          <thead>
+            <tr>
+              <th>Income</th>
+              <th>Expense</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>PHP200</td>
+              <td>PHP400</td>
+            </tr>
+            <tr>
+              <td>PHP300</td>
+              <td>PHP500</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+    <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
+  </body>
+</html>

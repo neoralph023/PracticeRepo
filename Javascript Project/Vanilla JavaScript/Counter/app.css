@@ -1,0 +1,39 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 0.75rem;
+  font-size: 64px;
+}
+
+span {
+  margin-bottom: 0.75rem;
+  font-size: 92px;
+}
+
+button {
+  background-color: transparent;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.5rem;
+  letter-spacing: 0.25rem;
+  margin: 0.5rem;
+  cursor: pointer;
+}

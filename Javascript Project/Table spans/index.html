@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table</title>
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
+
+    <style></style>
+  </head>
+  <body>
+    <table id="myTable" class="display" style="width: 100%">
+      <thead>
+        <tr>
+          <th>Sample</th>
+          <th>Sample2</th>
+          <th>Sample3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Value2</td>
+          <td rowspan="n">Value</td>
+          <td>Value3</td>
+        </tr>
+        <tr>
+          <td>Value2</td>
+          <td style="display: none"></td>
+          <td>Value3</td>
+        </tr>
+        <tr>
+          <td>Value2</td>
+          <td style="display: none"></td>
+          <td>Value3</td>
+        </tr>
+      </tbody>
+    </table>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+    <script>
+      const array = [
+        {
+          test: "test",
+        },
+      ];
+
+      $(document).ready(function () {
+        $("#myTable").DataTable();
+      });
+    </script>
+  </body>
+</html>
