@@ -1,0 +1,15 @@
+.container {
+  font-family: sans-serif;
+  font-size: 16px;
+  text-align: left;
+}
+
+.label {
+  color: #6666;
+  margin-bottom: 3px;
+}
+
+.value {
+  color: #212521;
+  font-weight: bold;
+}

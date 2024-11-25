@@ -1,0 +1,20 @@
+.container {
+  display: grid;
+  width: 100%;
+  grid-template-areas:
+    "a b"
+    "c c";
+  gap: 15px;
+}
+
+.billing {
+  grid-area: a;
+}
+
+.serviceMeter {
+  grid-area: b;
+}
+
+.usage {
+  grid-area: c;
+}
