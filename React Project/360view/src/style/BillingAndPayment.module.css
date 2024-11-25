@@ -1,23 +1,6 @@
 .container {
   display: grid;
-  padding: 5px 15px;
-  grid-template:
-    "a b c"
-    "d e .";
-}
-
-.item1 {
-  grid-area: a;
-}
-.item2 {
-  grid-area: b;
-}
-.item3 {
-  grid-area: c;
-}
-.item4 {
-  grid-area: d;
-}
-.item5 {
-  grid-area: e;
+  padding: 15px 15px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
 }

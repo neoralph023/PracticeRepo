@@ -4,7 +4,9 @@ const DisplayField = (props) => {
   return (
     <div className={style.container}>
       <div className={style.label}>{props.label}</div>
-      <div className={style.value}>{props.value}</div>
+      <div className={props.warning ? style.warningValue : style.regularValue}>
+        {props.value}
+      </div>
     </div>
   );
 };

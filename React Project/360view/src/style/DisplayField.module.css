@@ -9,7 +9,12 @@
   margin-bottom: 3px;
 }
 
-.value {
+.regularValue {
   color: #212521;
+  font-weight: bold;
+}
+
+.warningValue {
+  color: red;
   font-weight: bold;
 }
