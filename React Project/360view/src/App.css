@@ -1,3 +1,7 @@
+:root {
+  --headerColor: #137db9;
+}
+
 .App {
   text-align: center;
   font-size: 16px;
@@ -44,4 +48,11 @@ button {
   background-color: #fff;
   box-shadow: 0 1px 7px rgba(52, 102, 116, 0.35);
   padding: 5px 10px;
+}
+
+.tableData td:not(:last-child) {
+  border-right: 1px solid #ced4da;
+}
+.tableData:nth-child(2n-1) {
+  background-color: #f6f6f6;
 }

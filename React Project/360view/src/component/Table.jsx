@@ -5,19 +5,18 @@ const Table = ({ label, header, data }) => {
   return (
     <table>
       <tbody>
-        <td colSpan={4} className={style.label}>
-          {label}
-        </td>
-        <tr>
+        {label && (
+          <td colSpan={4} className={style.label}>
+            {label}
+          </td>
+        )}
+
+        <tr className={style.header}>
           {header.map((i) => {
             return <td>{i}</td>;
           })}
         </tr>
-        <tr className={style.data}>
-          {data.map((i) => {
-            return <td>{i}</td>;
-          })}
-        </tr>
+        {data}
       </tbody>
     </table>
   );

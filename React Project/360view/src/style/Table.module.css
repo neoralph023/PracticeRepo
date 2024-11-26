@@ -7,11 +7,9 @@
 
 table {
   width: 100%;
+  border: 1px solid #ddd;
 }
 
-.data td:not(:last-child) {
-  border-right: 1px solid #ced4da;
-}
-.data:nth-child(2n-1) {
-  background-color: #f6f6f6;
+.header {
+  border-bottom: 1px solid #ddd;
 }
