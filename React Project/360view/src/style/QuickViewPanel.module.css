@@ -13,6 +13,8 @@
 
 .serviceMeter {
   grid-area: b;
+  display: flex;
+  height: auto;
 }
 
 .usage {

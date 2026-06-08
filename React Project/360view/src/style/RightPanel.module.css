@@ -1,0 +1,22 @@
+.tabContainer {
+  display: flex;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+}
+.tabContent {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.tab span {
+  color: var(--headerColor);
+  font-size: var(--mainFontSize);
+}
+.activeTab {
+  border-bottom: 2px solid var(--headerColor);
+}
