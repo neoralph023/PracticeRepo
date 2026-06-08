@@ -1,10 +1,12 @@
 import "./App.css";
-import ViewApp from "./panel/ViewApp";
+import RightPanel from "./panel/RightPanel";
+import LeftPanel from "./panel/LeftPanel";
 
 function App() {
   return (
     <div className="App">
-      <ViewApp />
+      <LeftPanel />
+      <RightPanel />
     </div>
   );
 }

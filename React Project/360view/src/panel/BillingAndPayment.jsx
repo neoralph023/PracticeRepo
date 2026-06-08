@@ -1,22 +1,70 @@
 import DisplayField from "../component/DisplayField";
 import style from "../style/BillingAndPayment.module.css";
+import { useEffect, useState } from "react";
+import getBillingAndPaymentApi from "../hooks/getBillingAndPaymentApi";
 
 const BillingAndPayment = () => {
+  const billingAndPaymentData = getBillingAndPaymentApi();
+  const [billingAndPayment, setBillingAndPayment] = useState({});
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await getBillingAndPaymentApi();
+      setBillingAndPayment(data.billingAndPayment);
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <div>
       <div className={style.container}>
-        <DisplayField label="Balance Due" value="$55.08" />
-        <DisplayField label="Due Date" value="$55.08" />
-        <DisplayField label="Next Reading Window" value="$55.08" />
-        <DisplayField label="New Charges" value="$55.08" />
-        <DisplayField label="Current Bill" value="$55.08" />
-        <DisplayField label="Balance Forward" value="$55.08" warning="true" />
-        <DisplayField label="Excess Credit" value="$55.08" />
-        <DisplayField label="Unbilled Balance" value="$55.08" />
-        <DisplayField label="Pending Payments" value="$55.08" />
-        <DisplayField label="Deposit On hand" value="$55.08" />
-        <DisplayField label="Deposit Interest" value="$55.08" />
-        <DisplayField label="Last Payment Amount" value="$55.08" />
+        <DisplayField
+          label="Balance Due"
+          value={`$${billingAndPayment.balanceDue}`}
+        />
+        <DisplayField label="Due Date" value={billingAndPayment.dueDate} />
+        <DisplayField
+          label="Next Reading Window"
+          value={billingAndPayment.nextReadingWindow}
+        />
+        <DisplayField
+          label="New Charges"
+          value={`$${billingAndPayment.newCharges}`}
+        />
+        <DisplayField
+          label="Current Bill"
+          value={`$${billingAndPayment.currentBill}`}
+        />
+        <DisplayField
+          label="Balance Forward"
+          value={`$${billingAndPayment.balanceForward}`}
+          warning="true"
+        />
+        <DisplayField
+          label="Excess Credit"
+          value={`$${billingAndPayment.excessCredit}`}
+        />
+        <DisplayField
+          label="Unbilled Balance"
+          value={`$${billingAndPayment.unbilledBalance}`}
+        />
+        <DisplayField
+          label="Pending Payments"
+          value={`$${billingAndPayment.pendingPayments}`}
+        />
+        <DisplayField
+          label="Deposit On hand"
+          value={`$${billingAndPayment.depositOnHand}`}
+        />
+        <DisplayField
+          label="Deposit Interest"
+          value={`$${billingAndPayment.depositInterest}`}
+        />
+        <DisplayField
+          label="Last Payment Amount"
+          value={`$${billingAndPayment.lastPaymentAmount}`}
+        />
       </div>
     </div>
   );
