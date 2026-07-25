@@ -8,7 +8,10 @@ const QuickViewPanel = () => {
   return (
     <div className={style.container}>
       <div className={style.billing}>
-        <PanelContainer header="Billing and Payment" action={<button>Activity Statement</button>}>
+        <PanelContainer
+          header="Billing and Payment"
+          action={<button>Activity Statement</button>}
+        >
           <BillingAndPayment />
         </PanelContainer>
       </div>

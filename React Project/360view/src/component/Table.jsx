@@ -1,7 +1,6 @@
 import style from "../style/Table.module.css";
 
 const Table = ({ label, header, data }) => {
-  console.log(header);
   return (
     <table>
       <tbody>

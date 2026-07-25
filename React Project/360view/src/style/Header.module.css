@@ -1,0 +1,8 @@
+.header_container {
+  display: flex;
+  background-color: var(--headerColor);
+  color: white;
+  padding: 20px;
+  font-size: var(--mainFontSize);
+  gap: 20px;
+}

@@ -1,15 +1,38 @@
 import Table from "../component/Table";
 import DisplayField from "../component/DisplayField";
 import style from "../style/Usage.module.css";
+import getUsageApi from "../hooks/getUsageApi";
+import { useState, useEffect } from "react";
 
 const Usage = () => {
-  const amount = ["$123.00", "$12.00", "$12.00"];
-  const usage = ["1000kwh", "2000kwh", "1000kwh"];
+  const [date, setDate] = useState([]);
+  const [amount, setAmount] = useState([]);
+  const [usage, setUsage] = useState([]);
+  const usageData = getUsageApi();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await getUsageApi();
+      const dates = data.usage.map((i) => i.date);
+      const amounts = data.usage.map((i) => i.amount);
+      const usages = data.usage.map((i) => i.usage);
+
+      setDate(dates);
+      setAmount(amounts);
+      setUsage(usages);
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <div className={style.main}>
-      <DisplayField label="Average Monthly Usage" value="$211.06" />
+      <DisplayField
+        label="Average Monthly Usage"
+        value={`$${parseFloat(usageData.averageMonthlyUsage).toFixed(2)}`}
+      />
       <Table
-        header={["", "Jan-23", "Feb-23", "Mar-23"]}
+        header={["", ...date]}
         data={
           <>
             <tr className="tableData">

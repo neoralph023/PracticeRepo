@@ -10,7 +10,7 @@ const RightPanel = () => {
   ];
   const [activeTab, setActiveTab] = useState(0);
   return (
-    <div>
+    <div className="right">
       <div className={style.tabContainer}>
         {tabs.map((tab, index) => (
           <div

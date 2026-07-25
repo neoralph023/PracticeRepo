@@ -5,8 +5,30 @@
 
 .App {
   text-align: center;
-  display: flex;
+  display: grid;
+  grid-template:
+    "header header"
+    "left right";
   gap: 20px;
+}
+
+.header {
+  grid-area: header;
+  background-color: var(--headerColor);
+  color: white;
+  font-size: var(--mainFontSize);
+}
+
+.left {
+  grid-area: left;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.right {
+  grid-area: right;
+  background-color: #f9f9f9;
+  padding: 20px;
 }
 
 .App-logo {
